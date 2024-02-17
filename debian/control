@@ -1,0 +1,28 @@
+Source: qadwaitadecorations
+Section: libs
+Priority: optional
+Maintainer: Francescodario cuzzocrea <bosconovic@gmail.com>
+Uploaders: Matthias Geiger <werdahias@riseup.net>
+Build-Depends: cmake (>= 3.0),
+               debhelper-compat (= 13),
+               libwayland-dev,
+               libqt5waylandclient5-dev,
+               libqt5svg5-dev,
+               pkg-config,
+               qtbase5-private-dev (>= 5.15.2~),
+               qtwayland5-private-dev (>= 5.15.2~),
+Standards-Version: 4.6.2
+Homepage: https://github.com/FedoraQt/QAdwaitaDecorations
+Vcs-Git: https://github.com/FedoraQt/QAdwaitaDecorations
+Vcs-Browser: https://github.com/FedoraQt/QAdwaitaDecorations
+Rules-Requires-Root: no
+
+Package: qadwaitadecorations-qt5
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Qt 5 decoration plugin implementing Adwaita-like 
+ client-side decorations.
+ Export QT_WAYLAND_DECORATION=adwaita to enable it for all
+ Qt applications.
